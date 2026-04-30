@@ -1,0 +1,15 @@
+#!/bin/bash
+apt-get update
+apt-get upgrade -y
+
+# Install Nginx
+apt-get install -y nginx
+systemctl start nginx
+systemctl enable nginx
+
+# Install Git
+apt-get install -y git
+
+# Install Node.js 18
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+apt-get install -y nodejs
